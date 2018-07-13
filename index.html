@@ -1,0 +1,108 @@
+<html>
+<head>
+    <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+<script> 
+      function showtext(){
+          var mytext= $("#searchbox").val();
+          $.getJSON('https://owapi.net/api/v3/u/' + mytext + '/blob', function(data) {
+              //$("img").each(function(){
+                  //var src=$(this).attr("src", data.us.stats.quickplay.overall_stats.avatar);
+              //});
+              //$("#avatar").src = data.us.stats.quickplay.overall_stats.avatar;
+             //alert(data.us.stats.quickplay.overall_stats.avatar);
+                console.log(data);
+          });
+      }
+  
+  </script>
+
+</head>
+<body>
+    <title>
+        Hello World
+    </title>
+
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href="#">Find a Player</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+     <div class="collapse navbar-collapse " id="navbarSupportedContent">
+          <ul class="navbar-nav mr-4">
+            
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link " href="#">Contact</a>
+            </li>
+          </ul>
+          
+        </div>
+     </nav>
+
+     <header class="header">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="description text-center">
+                <h3>
+                 Overwatch Player Search
+                 <p>
+                 Search for an Overwatch Player by his/her player Id</p>
+                 <button class="btn btn-outline-secondary">See more</button>
+                </h3>
+            </div>
+
+            <div>
+                <div id="avatarid">
+                    <img src="http://www.stickpng.com/assets/images/585e4ae1cb11b227491c3393.png" width=100 height=100>
+                </div>
+                <div>
+                    <input type=text id="searchbox" name=searchbox size="20" placeholder="Query">
+                    <button id="searchbutton" name=searchbutton onclick="showtext()">Search!</button>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+     </header>
+
+     <div>
+
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12">
+             <img src="images/micah-profile.jpg" class="img-fluid">
+             <span class="text-justify">Developer</span>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 desc">
+              
+             <h3>Micah Sorkin</h3>
+             <p>
+                ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+              proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+             </p>
+            </div>
+           </div>
+     </div>
+
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
