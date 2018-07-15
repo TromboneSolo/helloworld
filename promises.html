@@ -1,0 +1,17 @@
+<script type="text/javascript">
+
+var keepsHisWord;
+keepsHisWord = false;
+
+promise1 = new Promise(function (resolve, reject){
+    setTimeout(function(){
+        resolve({
+            message: "The man likes to keep his word",
+            code: "aManKeepsHisWord"
+        });
+    }, 1000);
+});
+
+console.log(promise1);
+
+</script>
